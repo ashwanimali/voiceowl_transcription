@@ -44,5 +44,5 @@ export const downloadAudio = async (url: string, retries = 3, delay = 1000): Pro
     }
   }
 
-  throw new Error('Unexpected error in downloadAudio'); // Fallback (should never reach here)
+  throw new Error('Unexpected error in downloadAudio');
 };

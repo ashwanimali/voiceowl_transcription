@@ -1,4 +1,3 @@
-// src/utils/logger.ts
 import { createLogger, transports, format } from 'winston';
 import path from 'path';
 import fs from 'fs';
@@ -18,13 +17,10 @@ const logger = createLogger({
         )
     ),
     transports: [
-        // 🔄 Log everything to console
         new transports.Console(),
 
-        // 📝 Info & above (info, warn, error) go to combined.log
         new transports.File({ filename: path.join(logDir, 'combined.log') }),
 
-        // ❌ Only errors go to error.log
         new transports.File({ filename: path.join(logDir, 'error.log'), level: 'error' }),
     ],
 });

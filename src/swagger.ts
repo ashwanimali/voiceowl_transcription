@@ -1,4 +1,3 @@
-// src/swagger.ts
 import swaggerJSDoc from 'swagger-jsdoc';
 
 export const swaggerOptions: swaggerJSDoc.Options = {
@@ -10,7 +9,7 @@ export const swaggerOptions: swaggerJSDoc.Options = {
             description: 'API for audio transcription service',
         },
     },
-    apis: ['./src/routes/*.ts', './src/controllers/*.ts'], // Scan these files for annotations
+    apis: ['./src/routes/*.ts', './src/controllers/*.ts'],
 };
 
 export const swaggerSpec = swaggerJSDoc(swaggerOptions);
